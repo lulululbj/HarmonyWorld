@@ -1,14 +1,7 @@
-import { PreferenceUtil } from '@ohos/utils/Index';
-import FloatManager from './float/FloatManager';
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  aboutToAppear(): void {
-
-  }
+struct FloatJumpPage {
+  @State message: string = 'Welcome to HarmonyOS World!';
 
   build() {
     Row() {

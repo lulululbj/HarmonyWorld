@@ -10,3 +10,4 @@
 /.clang-tidy
 **/.test
 /oh-package-lock.json5
+/entry/oh-package-lock.json5

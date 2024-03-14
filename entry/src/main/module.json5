@@ -17,9 +17,9 @@
         "name": "EntryAbility",
         "srcEntry": "./ets/entryability/EntryAbility.ets",
         "description": "$string:EntryAbility_desc",
-        "icon": "$media:icon",
-        "label": "$string:EntryAbility_label",
-        "startWindowIcon": "$media:startIcon",
+        "icon": "$media:mobile_dev",
+        "label": "$string:HarmonyWorld",
+        "startWindowIcon": "$media:mobile_dev",
         "startWindowBackground": "$color:start_window_background",
         "exported": true,
         "skills": [
