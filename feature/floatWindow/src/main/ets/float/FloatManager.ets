@@ -6,8 +6,7 @@
 
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { PreferenceUtil } from '@ohos/shared/Index';
-import { Log, PreferenceUtilHar } from '@ohos/utils/Index';
+import { Log, PreferenceUtil } from '@ohos/utils/Index';
 import { FloatPreferenceKey } from '../model/Constants';
 
 const TAG = "[FloatManager]"
@@ -28,6 +27,11 @@ class FloatManager {
     this.locationY = locationY
   }
 
+  saveLocation() {
+    PreferenceUtil.getInstance().setValue(FloatPreferenceKey.locationX, this.locationX)
+    PreferenceUtil.getInstance().setValue(FloatPreferenceKey.locationY, this.locationY)
+  }
+
   updateLocation(offSetX: number, offsetY: number) {
     if (this.sub_windowClass != null) {
       this.locationX = this.locationX + offSetX
@@ -41,16 +45,10 @@ class FloatManager {
         }
         Log.info(TAG, `save float locatio: ${this.locationX} ${this.locationY}`)
       });
-      PreferenceUtil.getInstance().setValue(FloatPreferenceKey.locationX, this.locationX)
-      PreferenceUtilHar.getInstance().setValue(FloatPreferenceKey.locationX, this.locationX)
-      PreferenceUtil.getInstance().setValue(FloatPreferenceKey.locationY, this.locationY)
-      PreferenceUtilHar.getInstance().setValue(FloatPreferenceKey.locationY, this.locationY)
     }
   }
 
   showSubWindow() {
-    // this.locationX = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationX, this.locationX)
-    // this.locationY = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationY, this.locationY)
     if (this.windowStage_ == null) {
       Log.error(TAG, 'Failed to create the subwindow. Cause: windowStage_ is null');
     } else {
@@ -62,8 +60,9 @@ class FloatManager {
         }
         this.sub_windowClass = data;
         Log.info(TAG, 'Succeeded in creating the subwindow. Data: ' + `x: ${this.locationX}`);
+
         // 2.子窗口创建成功后，设置子窗口的位置、大小及相关属性等。
-        this.sub_windowClass.moveWindowTo(this.locationX, this.locationY, (err: BusinessError) => {
+        this.sub_windowClass.moveWindowTo(Math.floor(this.locationX), Math.floor(this.locationY), (err: BusinessError) => {
           let errCode: number = err.code;
           if (errCode) {
             Log.error(TAG, 'Failed to move the window. Cause:' + JSON.stringify(err));
@@ -97,7 +96,6 @@ class FloatManager {
           });
         });
       }
-
       )
     }
   }

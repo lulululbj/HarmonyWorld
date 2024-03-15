@@ -22,6 +22,10 @@ export struct FloatPage {
               Log.error(`offsetX: ${event.offsetX} offsetY: ${event.offsetY}`)
               FloatManager.updateLocation(event.offsetX, event.offsetY)
             }
+          })
+          .onActionEnd(() => {
+            Log.info(`PanGesture onActionEnd`)
+            FloatManager.saveLocation()
           }),
         TapGesture({ count: 1 })
           .onAction(() => {
