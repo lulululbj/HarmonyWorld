@@ -1,7 +1,7 @@
-@Entry
+@Entry({routeName: "floatJumpPage"})
 @Component
-struct Index {
-  @State message: string = 'Hello World';
+export struct FloatJumpPage {
+  @State message: string = 'Welcome to HarmonyOS World!';
 
   build() {
     Row() {

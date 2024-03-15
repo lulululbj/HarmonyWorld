@@ -1,5 +1,5 @@
 export { default as Log } from './src/main/ets/utils/Log'
 
-export { PreferenceUtilHar } from './src/main/ets/utils/PreferenceUtilHar'
+export { PreferenceUtil } from './src/main/ets/utils/PreferenceUtil'
 
 export { ObservedArray } from './src/main/ets/utils/ObservedArray'

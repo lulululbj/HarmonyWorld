@@ -1,14 +1,11 @@
 {
   "module": {
     "name": "floatWindow",
-    "type": "shared",
-    "description": "$string:shared_desc",
+    "type": "har",
     "deviceTypes": [
-      "phone",
+      "default",
       "tablet",
       "2in1"
-    ],
-    "deliveryWithInstall": true,
-    "pages": "$profile:main_pages"
+    ]
   }
 }

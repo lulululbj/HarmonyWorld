@@ -5,9 +5,7 @@
   "main": "Index.ets",
   "author": "",
   "license": "Apache-2.0",
-  "packageType": "InterfaceHar",
   "dependencies": {
     "@ohos/utils": "file:../../common/utils",
-    "@ohos/shared": "file:../../common/shared"
   }
 }

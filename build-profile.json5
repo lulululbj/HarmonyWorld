@@ -37,28 +37,8 @@
       "srcPath": "./common/utils"
     },
     {
-      "name": "shared",
-      "srcPath": "./common/shared",
-      "targets": [
-        {
-          "name": "default",
-          "applyToProducts": [
-            "default"
-          ]
-        }
-      ]
-    },
-    {
       "name": "floatWindow",
-      "srcPath": "./feature/floatWindow",
-      "targets": [
-        {
-          "name": "default",
-          "applyToProducts": [
-            "default"
-          ]
-        }
-      ]
+      "srcPath": "./feature/floatWindow"
     }
   ]
 }

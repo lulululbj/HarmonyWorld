@@ -4,9 +4,8 @@ import Log from '@ohos/utils/src/main/ets/utils/Log';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Constants, EventHubConstants } from '../model/Constants';
 import { FloatManager } from '@ohos/floatwindow/Index';
-import { PreferenceUtil } from '@ohos/shared/Index';
 import { FloatPreferenceKey } from '@ohos/floatwindow/src/main/ets/model/Constants';
-import { PreferenceUtilHar } from '@ohos/utils/Index';
+import { PreferenceUtil } from '@ohos/utils/Index';
 
 
 const TAG = "[EntryAbility]"
@@ -27,7 +26,6 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
     Log.info(TAG, 'Ability onWindowStageCreate')
     PreferenceUtil.getInstance().init(this.context, "HarmonyWorld")
-    PreferenceUtilHar.getInstance().init(this.context, "HarmonyWorld")
 
     FloatManager.setWindowStage(windowStage)
 
@@ -61,8 +59,6 @@ export default class EntryAbility extends UIAbility {
         this.mainRouter = this.windowClass!.getUIContext().getRouter()
       });
     })
-
-
   }
 
   onWindowStageDestroy(): void {
@@ -85,8 +81,8 @@ export default class EntryAbility extends UIAbility {
     // 悬浮窗点击事件
     eventHub.on(EventHubConstants.event_click_float, () => {
       if (this.mainRouter) {
-        this.mainRouter.pushUrl({
-          url: "pages/float/FloatJumpPage"
+        this.mainRouter.pushNamedRoute({
+          name: "floatJumpPage"
         })
       }
     })
