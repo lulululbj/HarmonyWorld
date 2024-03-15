@@ -1,7 +1,7 @@
 import { Log } from '@ohos/utils/Index'
-import FloatManager from './FloatManager'
 import { common } from '@kit.AbilityKit'
-import { EventHubConstants } from '../../model/Constants'
+import { FloatManager } from '@ohos/floatwindow'
+import { FloatEventHubConstants } from '@ohos/floatwindow/src/main/ets/model/Constants'
 
 @Entry
 @Component
@@ -21,16 +21,21 @@ export struct FloatPage {
             if (event) {
               Log.error(`offsetX: ${event.offsetX} offsetY: ${event.offsetY}`)
               FloatManager.updateLocation(event.offsetX, event.offsetY)
+              FloatManager.saveLocation()
             }
+          })
+          .onActionEnd((event: GestureEvent | undefined) => {
+              Log.error("onActionEnd")
+              FloatManager.saveLocation()
           }),
         TapGesture({ count: 1 })
           .onAction(() => {
-            this.context.eventHub.emit(EventHubConstants.event_click_float)
+            this.context.eventHub.emit(FloatEventHubConstants.event_click_float)
           }))
     )
   }
 
   onBackPress(): boolean | void {
-    this.context.eventHub.emit(EventHubConstants.event_float_onback)
+    this.context.eventHub.emit(FloatEventHubConstants.event_float_onback)
   }
 }

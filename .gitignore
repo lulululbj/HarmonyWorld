@@ -11,3 +11,4 @@
 **/.test
 /oh-package-lock.json5
 /entry/oh-package-lock.json5
+/feature/floatWindow/oh-package-lock.json5

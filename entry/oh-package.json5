@@ -6,7 +6,9 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@ohos/utils": "file:../commons/utils"
+    "@ohos/utils": "file:../common/utils",
+    "@ohos/shared": "file:../common/shared",
+    "@ohos/floatwindow": "file:../feature/floatwindow"
   }
 }
 

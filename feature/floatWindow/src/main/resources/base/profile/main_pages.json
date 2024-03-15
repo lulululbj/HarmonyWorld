@@ -1,0 +1,6 @@
+{
+  "src": [
+    "pages/FloatPage",
+    "float/FloatJumpPage"
+  ]
+}

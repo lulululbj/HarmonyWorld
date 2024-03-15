@@ -1,5 +1,7 @@
 import data_preferences from '@ohos.data.preferences'
-import Log from './Log'
+import Log from '../../../../../utils/src/main/ets/utils/Log'
+import { Context } from '@kit.AbilityKit'
+import { ValueType } from '@kit.ArkData'
 
 /**
  * Description: 键值对存储
@@ -8,13 +10,44 @@ import Log from './Log'
  */
 
 export class PreferenceUtil {
-  private preferences: data_preferences.Preferences | null = null
+  private preferences?: data_preferences.Preferences
+  private static instance: PreferenceUtil
+  private preferenceName = "HarmonyWorld"
+
+  private constructor() {
+  }
+
+  public static getInstance(): PreferenceUtil {
+    if (!PreferenceUtil.instance) {
+      PreferenceUtil.instance = new PreferenceUtil()
+    }
+    return PreferenceUtil.instance
+  }
 
   init(context: Context, preferenceName: string) {
     try {
       this.preferences = data_preferences.getPreferencesSync(context, { name: preferenceName })
     } catch (err) {
       Log.error("Failed to get preferences. code =" + err.code + ", message =" + err.message)
+    }
+  }
+
+  setValue<T>(key: string, defaultValue: T) {
+    if (this.preferences) {
+      this.preferences.put(key, JSON.stringify(defaultValue))
+      this.preferences.flush()
+    }
+  }
+
+  getValue<T>(key: string, defaultValue: ValueType): T {
+    try {
+      if (this.preferences) {
+        return this.preferences.getSync(key, defaultValue) as T
+      }
+      return defaultValue as T
+    } catch (e) {
+      Log.error(this.preferenceName, `getValue[${key}] error: ${e}`)
+      return defaultValue as T
     }
   }
 
@@ -45,5 +78,3 @@ export class PreferenceUtil {
     }
   }
 }
-
-export default new PreferenceUtil()

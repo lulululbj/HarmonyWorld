@@ -4,8 +4,6 @@ export class Constants {
 }
 
 export class PreferenceKey {
-  static locationX = "locationX"
-  static locationY = "locationY"
 }
 
 export class EventHubConstants {

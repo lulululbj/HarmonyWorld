@@ -3,10 +3,6 @@
 struct Index {
   @State message: string = 'Hello World';
 
-  aboutToAppear(): void {
-
-  }
-
   build() {
     Row() {
       Column() {

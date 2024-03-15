@@ -3,8 +3,11 @@ import { Router, window } from '@kit.ArkUI';
 import Log from '@ohos/utils/src/main/ets/utils/Log';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Constants, EventHubConstants } from '../model/Constants';
-import { PreferenceUtil } from '@ohos/utils/Index';
-import FloatManager from '../pages/float/FloatManager';
+import { FloatManager } from '@ohos/floatwindow/Index';
+import { PreferenceUtil } from '@ohos/shared/Index';
+import { FloatPreferenceKey } from '@ohos/floatwindow/src/main/ets/model/Constants';
+import { PreferenceUtilHar } from '@ohos/utils/Index';
+
 
 const TAG = "[EntryAbility]"
 
@@ -23,8 +26,14 @@ export default class EntryAbility extends UIAbility {
 
   onWindowStageCreate(windowStage: window.WindowStage): void {
     Log.info(TAG, 'Ability onWindowStageCreate')
-    PreferenceUtil.init(this.context, "HarmonyWorld")
+    PreferenceUtil.getInstance().init(this.context, "HarmonyWorld")
+    PreferenceUtilHar.getInstance().init(this.context, "HarmonyWorld")
+
     FloatManager.setWindowStage(windowStage)
+
+    let locationX = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationX, 200)
+    let locationY = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationY, 200)
+    FloatManager.setLocation(Math.floor(locationX), Math.floor(locationY))
     FloatManager.showSubWindow()
 
     // 获取主窗口
