@@ -22,7 +22,7 @@ class FloatManager {
     this.windowStage_ = windowStage
   }
 
-  resizeLocation(offSetX: number, offsetY: number) {
+  updateLocation(offSetX: number, offsetY: number) {
     if (this.sub_windowClass != null) {
       this.locationX = this.locationX + offSetX
       this.locationY = this.locationY + offsetY

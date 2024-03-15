@@ -17,17 +17,11 @@ export struct FloatPage {
     .gesture(
       GestureGroup(GestureMode.Exclusive,
         PanGesture()
-          .onActionStart(() => {
-            Log.error("start pan")
-          })
           .onActionUpdate((event: GestureEvent | undefined) => {
             if (event) {
               Log.error(`offsetX: ${event.offsetX} offsetY: ${event.offsetY}`)
-              FloatManager.resizeLocation(event.offsetX, event.offsetY)
+              FloatManager.updateLocation(event.offsetX, event.offsetY)
             }
-          })
-          .onActionEnd((event: GestureEvent | undefined) => {
-
           }),
         TapGesture({ count: 1 })
           .onAction(() => {
