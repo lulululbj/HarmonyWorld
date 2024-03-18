@@ -7,5 +7,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@ohos/utils": "file:../../common/utils",
+    "@ohos/components": "file:../../common/components",
   }
 }

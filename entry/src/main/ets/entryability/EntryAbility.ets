@@ -26,13 +26,8 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
     Log.info(TAG, 'Ability onWindowStageCreate')
     PreferenceUtil.getInstance().init(this.context, "HarmonyWorld")
-
-    FloatManager.setWindowStage(windowStage)
-
-    let locationX = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationX, 200)
-    let locationY = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationY, 200)
-    FloatManager.setLocation(Math.floor(locationX), Math.floor(locationY))
-    FloatManager.showSubWindow()
+    // 悬浮窗配置
+    this.initFloatWindow(windowStage);
 
     // 获取主窗口
     windowStage.getMainWindow((err: BusinessError, data: window.Window) => {
@@ -47,7 +42,7 @@ export default class EntryAbility extends UIAbility {
       // 获取状态栏和导航条高度
       let navigationIndicatorAvoidArea = this.windowClass.getWindowAvoidArea(window.AvoidAreaType.TYPE_NAVIGATION_INDICATOR)
       let systemAvoidArea = this.windowClass.getWindowAvoidArea(window.AvoidAreaType.TYPE_SYSTEM)
-      Constants.bottomPadding = navigationIndicatorAvoidArea.bottomRect.height
+      Constants.bottomPadding =navigationIndicatorAvoidArea.bottomRect.height
       Constants.topPadding = systemAvoidArea.topRect.height
 
       windowStage.loadContent('pages/Index', (err, data) => {
@@ -60,6 +55,8 @@ export default class EntryAbility extends UIAbility {
       });
     })
   }
+
+
 
   onWindowStageDestroy(): void {
     // Main window is destroyed, release UI related resources
@@ -76,7 +73,7 @@ export default class EntryAbility extends UIAbility {
     Log.info(TAG, 'Ability onBackground')
   }
 
-  registerEventHub() {
+  private registerEventHub() {
     let eventHub = this.context.eventHub
     // 悬浮窗点击事件
     eventHub.on(EventHubConstants.event_click_float, () => {
@@ -92,5 +89,12 @@ export default class EntryAbility extends UIAbility {
         this.mainRouter.back()
       }
     })
+  }
+
+  private initFloatWindow(windowStage: window.WindowStage) {
+    let locationX = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationX, 200);
+    let locationY = PreferenceUtil.getInstance().getNumber(FloatPreferenceKey.locationY, 200);
+    FloatManager.init(windowStage, Math.floor(locationX), Math.floor(locationY));
+    FloatManager.showSubWindow();
   }
 }

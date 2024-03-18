@@ -18,11 +18,8 @@ class FloatManager {
   locationY = 200
   size = 100
 
-  setWindowStage(windowStage: window.WindowStage) {
+  init(windowStage: window.WindowStage, locationX: number, locationY: number) {
     this.windowStage_ = windowStage
-  }
-
-  setLocation(locationX: number, locationY: number) {
     this.locationX = locationX
     this.locationY = locationY
   }
@@ -97,6 +94,18 @@ class FloatManager {
         });
       }
       )
+    }
+  }
+
+  destroyFloatWindow() {
+    if (this.sub_windowClass) {
+      this.sub_windowClass.destroyWindow((err: BusinessError) => {
+        let errCode: number = err.code;
+        if (errCode) {
+          Log.error(TAG, 'Failed to destroy the window. Cause: ' + JSON.stringify(err));
+          return;
+        }
+      })
     }
   }
 }
