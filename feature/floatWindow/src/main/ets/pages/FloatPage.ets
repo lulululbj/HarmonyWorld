@@ -1,5 +1,5 @@
-import { Log } from '@ohos/utils/Index'
 import { common } from '@kit.AbilityKit'
+import { Log } from '@ohos/utils/Index'
 import FloatManager from '../float/FloatManager'
 import { FloatEventHubConstants } from '../model/Constants'
 

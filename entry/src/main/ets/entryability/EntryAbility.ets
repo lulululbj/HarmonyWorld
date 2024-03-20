@@ -1,11 +1,10 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { Router, window } from '@kit.ArkUI';
-import Log from '@ohos/utils/src/main/ets/utils/Log';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Constants, EventHubConstants } from '../model/Constants';
 import { FloatManager } from '@ohos/floatwindow/Index';
 import { FloatPreferenceKey } from '@ohos/floatwindow/src/main/ets/model/Constants';
-import { PreferenceUtil } from '@ohos/utils/Index';
+import { Log, PreferenceUtil } from '@ohos/utils/Index';
 
 
 const TAG = "[EntryAbility]"

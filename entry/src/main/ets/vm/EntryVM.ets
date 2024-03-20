@@ -3,6 +3,7 @@ import { HomeMenuEntity } from '../model/HomeMenuEntity'
 
 export class EntryVM {
   homeMenuList: HomeMenuEntity[] = [
-    new HomeMenuEntity("悬浮窗", RouterConstants.FLOAT_MANAGER)
+    new HomeMenuEntity("悬浮窗", RouterConstants.FLOAT_MANAGER),
+    new HomeMenuEntity("har && hsp", RouterConstants.HAR_HSP)
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "name": "hspone",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "packageType": "InterfaceHar",
+  "dependencies": {
+//    "@ohos/components": "file:../../common/components",
+//    "@ohos/utils": "file:../../common/utils"
+    "@ohos/bridge": "file:../../common/bridge"
+  }
+}

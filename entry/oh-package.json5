@@ -6,9 +6,15 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@ohos/utils": "file:../common/utils",
+
+    "@ohos/harOne": "file:../feature/harOne",
+    "@ohos/harTwo": "file:../feature/harTwo",
+    "@ohos/hspOne": "file:../feature/hspOne",
+    "@ohos/hspTwo": "file:../feature/hspTwo",
     "@ohos/floatwindow": "file:../feature/floatWindow",
-    "@ohos/components": "file:../common/components"
+        "@ohos/utils": "file:../common/utils",
+    "@ohos/components": "file:../common/components",
+//    "@ohos/bridge": "file:../common/bridge",
   }
 }
 

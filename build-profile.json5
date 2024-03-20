@@ -43,6 +43,50 @@
     {
       "name": "components",
       "srcPath": "./common/components"
+    },
+    {
+      "name": "hspOne",
+      "srcPath": "./feature/hspOne",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hspTwo",
+      "srcPath": "./feature/hspTwo",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "harOne",
+      "srcPath": "./feature/harOne"
+    },
+    {
+      "name": "harTwo",
+      "srcPath": "./feature/harTwo"
+    },
+    {
+      "name": "bridge",
+      "srcPath": "./common/bridge",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

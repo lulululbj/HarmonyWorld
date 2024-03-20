@@ -8,5 +8,6 @@
   "dependencies": {
     "@ohos/utils": "file:../../common/utils",
     "@ohos/components": "file:../../common/components",
+//    "@ohos/bridge": "file:../../common/bridge",
   }
 }

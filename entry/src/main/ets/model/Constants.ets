@@ -13,4 +13,5 @@ export class EventHubConstants {
 
 export class RouterConstants {
   static FLOAT_MANAGER = "floatManager"
+  static HAR_HSP = "har_hsp"
 }

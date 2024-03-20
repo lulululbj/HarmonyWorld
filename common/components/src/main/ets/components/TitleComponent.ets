@@ -1,12 +1,10 @@
-import router from '@ohos.router'
-
 @Component
 export struct TitleComponent {
   @Prop title: string | Resource = ""
   @Prop showBackIcon: boolean = true
   @Prop topPadding: number = 0
   onBack: () => void = () => {
-    router.back()
+
   }
 
   build() {
