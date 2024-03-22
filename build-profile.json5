@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/luyao/.ohos/config/default_HarmonyWorld_fwceqV8rNKWSUVW1Pb4mI7tbkejAJNw-Eiis5V5RIeo=.cer",
+          "storePassword": "0000001A40AB133C023ED8F0ABCEB6D89290FCAB0BED90C35463A99DDA2F1815B9ED5C31F251F0C01BD8",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001ACACCD9B6FB0106CD774B56DCF0A9395CE418E9F4ADFE4BEE598A02AC8675DFB5143BDAEA0C34",
+          "profile": "/Users/luyao/.ohos/config/default_HarmonyWorld_fwceqV8rNKWSUVW1Pb4mI7tbkejAJNw-Eiis5V5RIeo=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/luyao/.ohos/config/default_HarmonyWorld_fwceqV8rNKWSUVW1Pb4mI7tbkejAJNw-Eiis5V5RIeo=.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",

@@ -1,14 +1,13 @@
 import { FloatManagerPage } from '@ohos/floatwindow/Index'
 import { Constants, RouterConstants } from '../model/Constants'
 import { HomeMenuEntity } from '../model/HomeMenuEntity'
-import { NavigationManager } from '../../../../../common/utils/src/main/ets/utils/NavigationManager'
 import { EntryVM } from '../vm/EntryVM'
 import { HarHspPage } from './HarHspPage'
 import { HspOnePage } from '@ohos/hspOne/Index'
 import { HarOnePage } from '@ohos/harOne/Index'
-import { HarTwoPage } from '@ohos/harTwo/Index'
+// import { HarTwoPage } from '@ohos/harTwo/Index'
 import { HspTwoPage } from '@ohos/hspTwo/Index'
-import { Log } from '@ohos/utils/Index'
+import { Log, NavigationManager } from '@ohos/utils/Index'
 import { NormalButton } from '@ohos/components/Index'
 
 @Entry
@@ -58,7 +57,7 @@ struct Index {
       } else if (name == "HarOnePage") {
         HarOnePage()
       } else if (name == "HarTwoPage") {
-        HarTwoPage()
+        // HarTwoPage()
       } else if (name === "HspOnePage") {
         HspOnePage()
       } else if (name === "HspTwoPage") {

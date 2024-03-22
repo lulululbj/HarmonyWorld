@@ -1,6 +1,5 @@
 import { NormalButton, TitleComponent } from '@ohos/components/Index';
 import { NavigationManager } from '@ohos/utils/Index';
-import { router } from '@kit.ArkUI';
 
 @Entry({ routeName: "HarTwoPage" })
 @Component

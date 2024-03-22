@@ -1,6 +1,6 @@
-import { NavigationManager } from '../../../../../common/utils/src/main/ets/utils/NavigationManager';
 import router from '@ohos.router';
 import { NormalButton, TitleComponent } from '@ohos/components/Index';
+import { NavigationManager } from '@ohos/utils/Index';
 
 @Entry
 @Component

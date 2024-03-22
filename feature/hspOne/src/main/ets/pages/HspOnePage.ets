@@ -1,5 +1,5 @@
-import { NavigationManager, NormalButton, TitleComponent } from '@ohos/bridge/Index';
 import { router } from '@kit.ArkUI';
+import { NormalButton, TitleComponent } from '@ohos/components/Index';
 
 @Entry
 @Component

@@ -7,8 +7,8 @@
   "license": "Apache-2.0",
   "packageType": "InterfaceHar",
   "dependencies": {
-//    "@ohos/components": "file:../../common/components",
-//    "@ohos/utils": "file:../../common/utils"
-    "@ohos/bridge": "file:../../common/bridge"
+    "@ohos/components": "file:../../common/components",
+    "@ohos/utils": "file:../../common/utils"
+//    "@ohos/bridge": "file:../../common/bridge"
   }
 }
