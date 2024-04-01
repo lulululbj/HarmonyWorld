@@ -101,6 +101,14 @@
           ]
         }
       ]
+    },
+    {
+      "name": "stateManage",
+      "srcPath": "./feature/stateManage"
+    },
+    {
+      "name": "scan",
+      "srcPath": "./feature/scan"
     }
   ]
 }

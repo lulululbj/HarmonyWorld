@@ -1,6 +1,7 @@
 import router from '@ohos.router';
 import { NormalButton, TitleComponent } from '@ohos/components/Index';
 import { NavigationManager } from '@ohos/utils/Index';
+import { CusNavDestination } from './CusNavDestination';
 
 @Entry
 @Component
@@ -8,6 +9,21 @@ export struct HarHspPage {
   @State message: string = 'Hello World';
 
   build() {
+    Column(){
+      CusNavDestination({
+        customBuilderParam: this.builder,
+        onShow: () => {
+
+        },
+        onHidden: () => {
+
+        }
+      })
+    }
+  }
+
+  @Builder
+  builder() {
     Column() {
 
       TitleComponent({

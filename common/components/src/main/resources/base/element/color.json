@@ -7,6 +7,10 @@
     {
       "name": "black",
       "value": "#000000"
+    },
+    {
+      "name": "transparent",
+      "value": "#00000000"
     }
   ]
 }

@@ -1,6 +1,5 @@
 export class Constants {
-  static topPadding: number = 0
-  static bottomPadding: number = 0
+
 }
 
 export class PreferenceKey {
@@ -14,4 +13,5 @@ export class EventHubConstants {
 export class RouterConstants {
   static FLOAT_MANAGER = "floatManager"
   static HAR_HSP = "har_hsp"
+  static SCAN = "scan"
 }

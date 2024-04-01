@@ -6,6 +6,6 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-//    "@ohos/utils": "file:../utils"
+    "@ohos/utils": "file:../utils"
   }
 }

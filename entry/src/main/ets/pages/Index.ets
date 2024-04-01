@@ -1,14 +1,15 @@
 import { FloatManagerPage } from '@ohos/floatwindow/Index'
-import { Constants, RouterConstants } from '../model/Constants'
+import { RouterConstants } from '../model/Constants'
 import { HomeMenuEntity } from '../model/HomeMenuEntity'
 import { EntryVM } from '../vm/EntryVM'
 import { HarHspPage } from './HarHspPage'
 import { HspOnePage } from '@ohos/hspOne/Index'
 import { HarOnePage } from '@ohos/harOne/Index'
-// import { HarTwoPage } from '@ohos/harTwo/Index'
 import { HspTwoPage } from '@ohos/hspTwo/Index'
-import { Log, NavigationManager } from '@ohos/utils/Index'
+import { DeviceConstants, Log, NavigationManager } from '@ohos/utils/Index'
 import { NormalButton } from '@ohos/components/Index'
+import { StateManagePage } from '@ohos/stateManage/Index'
+import { CustomScanPage, ScanPage } from '@ohos/scan/Index'
 
 @Entry
 @Component
@@ -40,8 +41,8 @@ struct Index {
       }
       .width('100%')
       .height('100%')
+      .padding({ top: px2vp(DeviceConstants.topPadding) + 2 })
     }
-    .padding({ top: px2vp(Constants.topPadding) + 8 })
     .hideTitleBar(true)
     .mode(NavigationMode.Auto)
     .navDestination(this.appRouter)
@@ -62,6 +63,12 @@ struct Index {
         HspOnePage()
       } else if (name === "HspTwoPage") {
         HspTwoPage()
+      } else if (name == "StateManagePage") {
+        StateManagePage()
+      } else if (name == RouterConstants.SCAN) {
+        ScanPage()
+      } else if (name == "CustomScanPage") {
+        CustomScanPage()
       }
     }.hideTitleBar(true)
   }

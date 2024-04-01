@@ -1,10 +1,10 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { Router, window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { Constants, EventHubConstants } from '../model/Constants';
+import { EventHubConstants } from '../model/Constants';
 import { FloatManager } from '@ohos/floatwindow/Index';
 import { FloatPreferenceKey } from '@ohos/floatwindow/src/main/ets/model/Constants';
-import { Log, PreferenceUtil } from '@ohos/utils/Index';
+import { DeviceConstants, Log, PreferenceUtil } from '@ohos/utils/Index';
 
 
 const TAG = "[EntryAbility]"
@@ -41,8 +41,8 @@ export default class EntryAbility extends UIAbility {
       // 获取状态栏和导航条高度
       let navigationIndicatorAvoidArea = this.windowClass.getWindowAvoidArea(window.AvoidAreaType.TYPE_NAVIGATION_INDICATOR)
       let systemAvoidArea = this.windowClass.getWindowAvoidArea(window.AvoidAreaType.TYPE_SYSTEM)
-      Constants.bottomPadding =navigationIndicatorAvoidArea.bottomRect.height
-      Constants.topPadding = systemAvoidArea.topRect.height
+      DeviceConstants.bottomPadding = navigationIndicatorAvoidArea.bottomRect.height
+      DeviceConstants.topPadding = systemAvoidArea.topRect.height
 
       windowStage.loadContent('pages/Index', (err, data) => {
         if (err.code) {
@@ -54,7 +54,6 @@ export default class EntryAbility extends UIAbility {
       });
     })
   }
-
 
 
   onWindowStageDestroy(): void {

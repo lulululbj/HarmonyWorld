@@ -7,6 +7,7 @@ export struct FloatManagerPage {
   @State message: string = 'Hello World'
 
   build() {
+
     Column() {
       TitleComponent({
         title: "悬浮窗管理", onBack: () => {

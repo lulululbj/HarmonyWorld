@@ -12,7 +12,9 @@
     "@ohos/hspOne": "file:../feature/hspOne",
     "@ohos/hspTwo": "file:../feature/hspTwo",
     "@ohos/floatwindow": "file:../feature/floatWindow",
-        "@ohos/utils": "file:../common/utils",
+    "@ohos/stateManage": "file:../feature/stateManage",
+    "@ohos/scan": "file:../feature/scan",
+    "@ohos/utils": "file:../common/utils",
     "@ohos/components": "file:../common/components",
 //    "@ohos/bridge": "file:../common/bridge",
   }
