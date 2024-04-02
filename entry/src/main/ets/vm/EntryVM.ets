@@ -5,6 +5,7 @@ export class EntryVM {
   homeMenuList: HomeMenuEntity[] = [
     new HomeMenuEntity("悬浮窗", RouterConstants.FLOAT_MANAGER),
     new HomeMenuEntity("har && hsp", RouterConstants.HAR_HSP),
-    new HomeMenuEntity("Scan Kit", RouterConstants.SCAN)
+    new HomeMenuEntity("Scan Kit", RouterConstants.SCAN),
+    new HomeMenuEntity("Web", RouterConstants.Web)
   ]
 }

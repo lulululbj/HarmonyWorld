@@ -14,6 +14,7 @@
     "@ohos/floatwindow": "file:../feature/floatWindow",
     "@ohos/stateManage": "file:../feature/stateManage",
     "@ohos/scan": "file:../feature/scan",
+    "@ohos/web": "file:../feature/web",
     "@ohos/utils": "file:../common/utils",
     "@ohos/components": "file:../common/components",
 //    "@ohos/bridge": "file:../common/bridge",

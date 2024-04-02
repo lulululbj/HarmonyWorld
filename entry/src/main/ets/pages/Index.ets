@@ -10,6 +10,7 @@ import { DeviceConstants, Log, NavigationManager } from '@ohos/utils/Index'
 import { NormalButton } from '@ohos/components/Index'
 import { StateManagePage } from '@ohos/stateManage/Index'
 import { CustomScanPage, ScanPage } from '@ohos/scan/Index'
+import { WebPage } from '@ohos/web/Index'
 
 @Entry
 @Component
@@ -69,6 +70,8 @@ struct Index {
         ScanPage()
       } else if (name == "CustomScanPage") {
         CustomScanPage()
+      } else if (name === RouterConstants.Web) {
+        WebPage()
       }
     }.hideTitleBar(true)
   }

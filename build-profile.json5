@@ -109,6 +109,10 @@
     {
       "name": "scan",
       "srcPath": "./feature/scan"
+    },
+    {
+      "name": "web",
+      "srcPath": "./feature/web"
     }
   ]
 }
