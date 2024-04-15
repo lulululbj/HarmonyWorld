@@ -17,7 +17,7 @@ export struct WebPage {
     Column() {
       TitleComponent({
         title: this.title,
-        onBack: () => {
+        leftClick: () => {
           if (this.controller.accessBackward()) {
             this.controller.backward()
           } else {

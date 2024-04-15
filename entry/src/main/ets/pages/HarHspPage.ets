@@ -28,7 +28,7 @@ export struct HarHspPage {
 
       TitleComponent({
         title: "har && hsp",
-        onBack: () => {
+        leftClick: () => {
           NavigationManager.getInstance().pop()
         }
       })

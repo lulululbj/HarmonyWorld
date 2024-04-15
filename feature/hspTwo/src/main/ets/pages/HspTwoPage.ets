@@ -9,7 +9,7 @@ export struct HspTwoPage {
   build() {
     Column() {
       TitleComponent({
-        title: this.message, onBack: () => {
+        title: this.message, leftClick: () => {
           // HspTwo 和 entry 共同依赖了 NavigationManager 所在的 HAR，所以实际上存在两份实例
           // entry 中的 初始化在这里并不生效，无法使用 NavigationManager
           // 可以使用 @Provide @Consume 存取 NavPathStack

@@ -12,7 +12,7 @@ export struct ScanPage {
 
       TitleComponent({
         title: "Scan Kit",
-        onBack: () => {
+        leftClick: () => {
           NavigationManager.getInstance().pop()
         }
       })

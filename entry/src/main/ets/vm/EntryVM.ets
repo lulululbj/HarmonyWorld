@@ -6,6 +6,7 @@ export class EntryVM {
     new HomeMenuEntity("悬浮窗", RouterConstants.FLOAT_MANAGER),
     new HomeMenuEntity("har && hsp", RouterConstants.HAR_HSP),
     new HomeMenuEntity("Scan Kit", RouterConstants.SCAN),
-    new HomeMenuEntity("Web", RouterConstants.Web)
+    new HomeMenuEntity("Web", RouterConstants.Web),
+    new HomeMenuEntity("状态管理", RouterConstants.StateManagePage)
   ]
 }

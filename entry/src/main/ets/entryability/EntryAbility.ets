@@ -4,7 +4,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { EventHubConstants } from '../model/Constants';
 import { FloatManager } from '@ohos/floatwindow/Index';
 import { FloatPreferenceKey } from '@ohos/floatwindow/src/main/ets/model/Constants';
-import { DeviceConstants, Log, PreferenceUtil } from '@ohos/utils/Index';
+import { DeviceConstants, Log, PreferenceUtil, sleep } from '@ohos/utils/Index';
 
 
 const TAG = "[EntryAbility]"

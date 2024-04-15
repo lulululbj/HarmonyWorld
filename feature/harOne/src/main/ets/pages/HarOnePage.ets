@@ -9,7 +9,7 @@ export struct HarOnePage {
   build() {
     Column() {
       TitleComponent({
-        title: this.message, onBack: () => {
+        title: this.message, leftClick: () => {
           // harOne 是通过 router 跳转过来的，使用 router 返回
           router.back()
         }

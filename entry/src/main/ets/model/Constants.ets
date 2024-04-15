@@ -15,4 +15,5 @@ export class RouterConstants {
   static HAR_HSP = "har_hsp"
   static SCAN = "scan"
   static Web = "web"
+  static StateManagePage = "stateManagePage"
 }

@@ -9,3 +9,7 @@ export { NavigationManager } from './src/main/ets/utils/NavigationManager'
 export { checkAndRequestPermission } from './src/main/ets/utils/PermissionUtil'
 
 export { DeviceConstants } from './src/main/ets/utils/DeviceConstants'
+
+export { StringUtil } from './src/main/ets/utils/StringUtil'
+
+export { sleep } from './src/main/ets/utils/CommonUtil'

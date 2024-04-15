@@ -72,7 +72,7 @@ export struct CustomScanPage {
       Column() {
         TitleComponent({
           title: "自定义扫码",
-          onBack: () => {
+          leftClick: () => {
             NavigationManager.getInstance().pop()
           },
           bgColor: $r('app.color.transparent')

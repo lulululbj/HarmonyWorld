@@ -9,7 +9,7 @@ export struct HarTwoPage {
   build() {
     Column() {
       TitleComponent({
-        title: this.message, onBack: () => {
+        title: this.message, leftClick: () => {
           NavigationManager.getInstance().pop()
         }
       })

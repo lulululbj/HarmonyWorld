@@ -10,7 +10,7 @@ export struct FloatManagerPage {
 
     Column() {
       TitleComponent({
-        title: "悬浮窗管理", onBack: () => {
+        title: "悬浮窗管理", leftClick: () => {
           NavigationManager.getInstance().pop()
         }
       })

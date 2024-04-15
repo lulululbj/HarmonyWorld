@@ -11,6 +11,7 @@ import { NormalButton } from '@ohos/components/Index'
 import { StateManagePage } from '@ohos/stateManage/Index'
 import { CustomScanPage, ScanPage } from '@ohos/scan/Index'
 import { WebPage } from '@ohos/web/Index'
+import { HarTwoPage } from '@ohos/harTwo/Index'
 
 @Entry
 @Component
@@ -59,12 +60,12 @@ struct Index {
       } else if (name == "HarOnePage") {
         HarOnePage()
       } else if (name == "HarTwoPage") {
-        // HarTwoPage()
+        HarTwoPage()
       } else if (name === "HspOnePage") {
         HspOnePage()
       } else if (name === "HspTwoPage") {
         HspTwoPage()
-      } else if (name == "StateManagePage") {
+      } else if (name == RouterConstants.StateManagePage) {
         StateManagePage()
       } else if (name == RouterConstants.SCAN) {
         ScanPage()
