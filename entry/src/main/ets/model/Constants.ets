@@ -16,4 +16,5 @@ export class RouterConstants {
   static SCAN = "scan"
   static Web = "web"
   static StateManagePage = "stateManagePage"
+  static DialogPage = "dialogPage"
 }

@@ -113,6 +113,10 @@
     {
       "name": "web",
       "srcPath": "./feature/web"
+    },
+    {
+      "name": "dialog",
+      "srcPath": "./feature/dialog"
     }
   ]
 }

@@ -13,6 +13,7 @@
     "@ohos/hspTwo": "file:../feature/hspTwo",
     "@ohos/floatwindow": "file:../feature/floatWindow",
     "@ohos/stateManage": "file:../feature/stateManage",
+    "@ohos/dialog": "file:../feature/dialog",
     "@ohos/scan": "file:../feature/scan",
     "@ohos/web": "file:../feature/web",
     "@ohos/utils": "file:../common/utils",

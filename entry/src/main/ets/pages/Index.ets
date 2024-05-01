@@ -9,9 +9,11 @@ import { HspTwoPage } from '@ohos/hspTwo/Index'
 import { DeviceConstants, Log, NavigationManager } from '@ohos/utils/Index'
 import { NormalButton } from '@ohos/components/Index'
 import { StateManagePage } from '@ohos/stateManage/Index'
+import { DialogPage, NavDialog } from '@ohos/dialog/Index'
 import { CustomScanPage, ScanPage } from '@ohos/scan/Index'
 import { WebPage } from '@ohos/web/Index'
 import { HarTwoPage } from '@ohos/harTwo/Index'
+import { ifaa } from '@kit.OnlineAuthenticationKit'
 
 @Entry
 @Component
@@ -73,6 +75,10 @@ struct Index {
         CustomScanPage()
       } else if (name === RouterConstants.Web) {
         WebPage()
+      } else if (name === RouterConstants.DialogPage) {
+        DialogPage()
+      } else if (name === "NavDialog") {
+        NavDialog()
       }
     }.hideTitleBar(true)
   }
